@@ -80,13 +80,24 @@ body {
 	width: 94%;
 }
 
-#spin button {
+#spin button, #spin input {
 	background: #ddd;
 	border: none;
 	color: #555;
 	font-weight: bold;
 	font-size: 1.750em;
 	width: 100%;
+}
+
+#spin a {
+	color: #111;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+#spin p {
+	color: #333;
 }
 
 

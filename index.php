@@ -24,7 +24,6 @@
 	<?php
 		$form_data .= '<form action="'.$baseurl.'upload.php" method="post" id="photo-form" enctype="multipart/form-data">';
 		if(ismobilesafari()) {
-			$form_data .= "<p>You need picup.</p>";
 	?>
 	
 	<script type="text/javascript" language="JavaScript" src="<?=$baseurl?>js/prototype.js"></script>
@@ -49,8 +48,13 @@
 	</script>
 	
 	<?php
-		$form_data .= '<input type="file" name="photo" id="photo" />
+		$form_data .= '<div id="spin">
+						<input type="file" name="photo" id="photo" />
 					</form>';
+					
+		$form_data .= "<p>To use this web app you must first install <a href='http://www.picupapp.com/'>Picup App</a>.</p>";
+		$form_data .= "This app was developed by <a href='http://www.sicksicksicks.co.uk/'>Chrish 'Sickboy' Dunne</a>. For more information, please visit <a href='info.pdf'>this page</a></p>";
+		$form_data .= '<p>Using <strong><a href="http://www.recyclism.com/corrupt/corrupt.zip">Corrupt</a>&trade; - data corruption software 3.0</strong></p>';
 		} else {
 			$form_data .= "iPhone only, sorry honcho.";
 		}

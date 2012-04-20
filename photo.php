@@ -1,9 +1,5 @@
 <?php
 	require_once('config.php');
-
-	$b1 = rand(1000, 3999);
-	$b2 = rand(1999, 3999);
-	$b3 = rand(10, 99);
 	
 	// Corrupt some shit
 	$upfile_name = $_REQUEST['photo'];
@@ -13,9 +9,9 @@
 	
 	// this value tells this code how many (succesful) corrupted files should be generated
 	// with a maximum of set retries
-	$nCorrupts = 5;
-	$nRetries = $b1; // between 1000 and 3999
-	if($upfile_size > (500 * 1024)) die("File is too big");
+	$nCorrupts = 3;
+	$nRetries = 1000;
+	//if($upfile_size > (500 * 1024)) die("File is too big");
 
 	function jpegIsValid($filename) {
 		// load the file
@@ -29,9 +25,9 @@
 	}
 
 	function scramble($content, $size) {
-		$sStart = $b3; // between 10 and 99
+		$sStart = 10;
 		$sEnd = $size-1;
-		$nReplacements = $b2; // between 1999 and 3999
+		$nReplacements = rand(20, 30); // between 1999 and 3999
 
 		for($i = 0; $i < $nReplacements; $i++) {
 			$PosA = rand($sStart, $sEnd);
@@ -118,18 +114,12 @@
 			<img src="logo.png" alt="DTABND" />
 		</div>
 		
-		<div id="barrels">
-			<div class="barrel"><span><?php echo $b1; ?></span></div>
-			<div class="barrel"><span><?php echo $b2; ?></span></div>
-			<div class="barrel-last"><span><?php echo $b3; ?></span></div>
+		<div id="spin">
+			<button onclick="window.self.close()">RE-BEND</button>
 		</div>
 		
 		<div id="upload">
-			<img src='uploads/<?php echo $upfile . "-corrupted/" . rand(0, 4) . ".jpg"; ?>' alt="Corrupty goodness" />
-		</div>
-		
-		<div id="spin">
-			<button onclick="window.self.close()">SPIN AGAIN</button>
+			<img src='uploads/<?php echo $upfile . "-corrupted/0.jpg"; ?>' alt="Corrupty goodness" />
 		</div>
 	</div>
 

@@ -3,7 +3,7 @@ DTABND
 
 A web-based iPhone app for glitching jpeg images.
 
-======
+---
 
 This app was created as part of a brief on my course [Graphic Arts & Design @ Leeds Metropolitan University]
 called "Fruit Machine".
@@ -16,7 +16,7 @@ The project was in response to three pieces of information I was given:
 
 The images are either going to be collaborated into a zine or exhibited at an exhibition. I haven't decided yet.
 
-======
+---
 
 The app uses Picup [http://picupapp.com] to upload the images from Mobile Safari.
 It also uses Recyclism's Corrupt [https://github.com/recyclism/Corrupt] software to glitch the images.

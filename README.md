@@ -14,7 +14,7 @@ The project was in response to three pieces of information I was given:
  * The word CAMERA PHONE [Constraints]
  * The word NAIVE ART [Confusion]
 
-The images are either going to be collaborated into a zine or exhibited at an exhibition. Haven't decided yet.
+The images are either going to be collaborated into a zine or exhibited at an exhibition. I haven't decided yet.
 
 ======
 

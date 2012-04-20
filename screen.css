@@ -1,0 +1,117 @@
+/*
+--------------------------------------
+	Project: Dtabnd
+	File: screen.css
+	Author: Chrish Dunne
+	Author URI: http://www.sicksicksicks.co.uk/
+--------------------------------------
+*/
+
+html { font-size: 16px; }
+
+body {
+	background: #111;
+	font-family: 'Myriad Pro', Arial, Tahoma, sans-serif;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+
+/* - Header ----- */
+#header {
+	background: url('background.gif');
+	margin: 0 0 15px;
+	text-align: center;
+}
+
+#header img {
+	padding: 5px 0 0 0;
+}
+
+#content {
+	background: #eee;
+	border: 1px solid #333;
+	margin: 0 auto;
+	overflow: auto;
+	height: 440px;
+	width: 320px;
+}
+
+
+/* - Barrels ----- */
+#barrels {
+	overflow: auto;
+	margin: 0 auto;
+	width: 94%;
+}
+
+#barrels span {
+	color: #555;
+	font-size: 1.750em;
+	font-weight: bold;
+}
+
+#barrels .barrel, #barrels .barrel-last {
+	background: #ddd;
+	float: left;
+	height: 60px;
+	margin-right: 5%;
+	padding: 25px 0 0;
+	text-align: center;
+	width: 90px;
+}
+
+#barrels p {
+	font-size: 1.125em;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+}
+
+#barrels .barrel-last {
+	margin: 0;
+}
+
+
+/* - Spin ----- */
+#spin {
+	margin: 15px auto;
+	width: 94%;
+}
+
+#spin button {
+	background: #ddd;
+	border: none;
+	color: #555;
+	font-weight: bold;
+	font-size: 1.750em;
+	width: 100%;
+}
+
+
+/* - Upload ----- */
+#upload {
+	margin: 15px auto;
+	width: 94%;
+}
+
+#upload img {
+	width: 100%;
+}
+
+
+/* - Collect ----- */
+#collect {
+	margin: 15px auto;
+	width: 94%;
+}
+
+#collect button {
+	background: #ccc;
+	border: none;
+	color: #555;
+	font-weight: bold;
+	font-size: 1.750em;
+	width: 100%;
+}

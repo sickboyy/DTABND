@@ -24,3 +24,12 @@ It also uses Recyclism's Corrupt [https://github.com/recyclism/Corrupt] software
 Credits to:
  * Benjamin Gaulon---For use of his Corrupt software.
  * Ali Qureshi---For his article on how to use Picup.
+ * Everyone who has taken photos for me (full list coming soon).
+
+---
+
+KNOWN BUGS
+======
+
+* New window doesn't open in some (maybe older?) versions of iOS, so clicking "RE-BEND" closes the session without restoring another one. [Thanks Alex Reekie]
+* Re-uploading the same photo twice yields strange results. [Thanks Lydia Caprani]

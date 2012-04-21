@@ -6,6 +6,7 @@
 	$upfile_size = filesize($upfile_name);
 	$upfile_type = pathinfo($upfile_name, PATHINFO_EXTENSION);
 	$upfile      = $_REQUEST['picID'];
+	$upfile_uniq = uniqid($upfile);
 	
 	// this value tells this code how many (succesful) corrupted files should be generated
 	// with a maximum of set retries
@@ -68,7 +69,7 @@
 	}*/
 
 	// create a folder to store the corrupted versions
-	@mkdir("uploads/$upfile-corrupted");
+	@mkdir("uploads/$upfile_uniq-corrupted");
 	
 	// corrupt it a few times
 	for($c = 0, $r = 0; $c < $nCorrupts && $r < $nRetries; $r++) {
@@ -76,12 +77,12 @@
 		$corrupted = scramble($content, $size);
 		
 		// save it to disc
-		$fd = fopen("uploads/$upfile-corrupted/$c.jpg", "w") or die("The fopen went wrong, e-mail webmaster Ben.");
+		$fd = fopen("uploads/$upfile_uniq-corrupted/$c.jpg", "w") or die("The fopen went wrong, e-mail webmaster Ben.");
 		fwrite($fd, $corrupted, $size) or die("The fwrite went wrong, e-mail webmaster Ben.");
 		fclose($fd);
 
 		// count succeeded corrupts
-		if(jpegIsValid("uploads/$upfile-corrupted/$c.jpg")) $c++;
+		if(jpegIsValid("uploads/$upfile_uniq-corrupted/$c.jpg")) $c++;
 	}
 ?>
 
@@ -119,7 +120,7 @@
 		</div>
 		
 		<div id="upload">
-			<img src='uploads/<?php echo $upfile . "-corrupted/0.jpg"; ?>' alt="Corrupty goodness" />
+			<img src='uploads/<?php echo $upfile_uniq . "-corrupted/0.jpg"; ?>' alt="Corrupty goodness" />
 		</div>
 	</div>
 

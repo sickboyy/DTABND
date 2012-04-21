@@ -56,7 +56,7 @@
 		$form_data .= "This app was developed by <a href='http://www.sicksicksicks.co.uk/'>Chrish 'Sickboy' Dunne</a>. For more information, please visit <a href='info.pdf'>this page</a></p>";
 		$form_data .= '<p>Using <strong><a href="http://www.recyclism.com/corrupt/corrupt.zip">Corrupt</a>&trade; - data corruption software 3.0</strong></p>';
 		} else {
-			$form_data .= "iPhone only, sorry honcho.";
+			$form_data .= "Please visit this page using Safari on your iPhone.";
 		}
 	?>
 	
